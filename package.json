@@ -22,22 +22,71 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
       "not op_mini all"
     ],
+    "extends": [
+      "plugin:react/recommended",
+      "airbnb",
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+      "react",
+      "react-hooks",
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "rules": {
+        "prettier/prettier": "error",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/jsx-filename-extensions": [
+        1,
+        {
+          "extensions": [
+            ".tsx"
+          ]
+        }
+      ],
+      "import/prefer-default-export": "off",
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "ts": "never",
+          "tsx": "never"
+        }
+      ]
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
+    },
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "3": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.0",
+    "@typescript-eslint/parser": "^4.14.0",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "7.21.5",
+    "eslint-plugin-react-hooks": "4",
+    "prettier": "^2.2.1"
   }
 }
